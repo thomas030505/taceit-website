@@ -1,26 +1,42 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Brand palette */
+  --color-forest:      #2C3A2D;
+  --color-forest-light:#3D5240;
+  --color-sand:        #C9A87A;
+  --color-sand-light:  #E8D9BC;
+  --color-slate:       #3D5A80;
+  --color-slate-light: #5B7FA6;
+
+  /* Backgrounds */
+  --color-warm:        #F5F0E8;
+  --color-warm-dark:   #EDE5D5;
+  --color-ink:         #111512;
+  --color-ink-soft:    #1A2019;
+
+  /* Typography */
+  --color-text:        #1C1C1E;
+  --color-text-muted:  #6B6B6B;
+  --color-text-light:  #F5F0E8;
+
+  /* Fonts */
+  --font-display: var(--font-cormorant);
+  --font-sans:    var(--font-inter);
+  --font-mono:    ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-warm);
+  color: var(--color-text);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
+
+/* Utility: hide scrollbar but keep scroll */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
