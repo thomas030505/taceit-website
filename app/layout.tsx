@@ -21,11 +21,11 @@ const BASE_URL = "https://taceit.no";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "TACE IT AS – IT-konsulent og webutvikling i Tønsberg",
+    default: "TACE IT AS – Webutvikling og IT-tjenester i Tønsberg",
     template: "%s | TACE IT AS",
   },
   description:
-    "IT-konsulent og webutvikler i Tønsberg med over 20 års erfaring. TACE IT AS leverer webutvikling, systemrådgivning og digitale løsninger for bedrifter i Vestfold.",
+    "Familieeid IT-selskap i Tønsberg med over 20 års erfaring. Vi bygger nettsider og digitale løsninger for bedrifter i Vestfold – enkelt, raskt og pålitelig.",
   keywords: [
     "IT-konsulent Tønsberg",
     "webutvikling Tønsberg",
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     canonical: BASE_URL,
   },
   openGraph: {
-    title: "TACE IT AS – IT-konsulent og webutvikling i Tønsberg",
+    title: "TACE IT AS – Webutvikling og IT-tjenester i Tønsberg",
     description:
-      "Over 20 års erfaring med IT-konsulenttjenester og webutvikling for bedrifter i Tønsberg og Vestfold. Familieeid og engasjert.",
+      "Familieeid IT-selskap i Tønsberg med over 20 års erfaring. Vi bygger nettsider og digitale løsninger for bedrifter i Vestfold – enkelt, raskt og pålitelig.",
     url: BASE_URL,
     siteName: "TACE IT AS",
     locale: "nb_NO",
@@ -65,9 +65,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TACE IT AS – IT-konsulent og webutvikling i Tønsberg",
+    title: "TACE IT AS – Webutvikling og IT-tjenester i Tønsberg",
     description:
-      "Over 20 års erfaring med IT-konsulenttjenester og webutvikling for bedrifter i Tønsberg og Vestfold.",
+      "Familieeid IT-selskap i Tønsberg med over 20 års erfaring. Vi bygger nettsider og digitale løsninger for bedrifter i Vestfold.",
   },
   robots: {
     index: true,
