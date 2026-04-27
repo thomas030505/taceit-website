@@ -28,8 +28,13 @@ function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 
 export default function About() {
   return (
-    <section id="om-oss" className="bg-[#F5F0E8] py-28 lg:py-40 px-6">
-      <div className="max-w-4xl mx-auto text-center">
+    <section id="om-oss" className="relative bg-[#F5F0E8] py-28 lg:py-40 px-6 overflow-hidden">
+      {/* TACE icon watermark */}
+      <div
+        className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-[0.08] pointer-events-none"
+        style={{ backgroundImage: "url('/images/tace-icon.png')" }}
+      />
+      <div className="max-w-4xl mx-auto text-center relative">
         <FadeIn>
           <span
             className="inline-block text-[#C9A87A] text-xs font-semibold tracking-[0.4em] uppercase mb-6"
