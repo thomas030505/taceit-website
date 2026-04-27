@@ -61,10 +61,10 @@ export default function About() {
             className="text-[#6B6B6B] text-lg leading-relaxed max-w-2xl mx-auto mb-6"
             style={{ fontFamily: "var(--font-inter)" }}
           >
-            TACE IT AS er familieeid og bærer navnet etter familiens fire
-            medlemmer. Vi forvalter historiske eiendommer i Tønsbergs eldste
-            gater og bygger moderne digitale løsninger – to verdener som begge
-            krever håndverk, omsorg og langsiktig tenkning.
+            TACE IT AS er et familieeid IT-selskap i Tønsberg med over 20 års
+            erfaring. Vi leverer webutvikling, systemrådgivning og digitale
+            løsninger til bedrifter i Vestfold – og forvalter historiske
+            eiendommer i Tønsbergs eldste gater.
           </p>
           <p
             className="text-[#6B6B6B] text-lg leading-relaxed max-w-2xl mx-auto"
