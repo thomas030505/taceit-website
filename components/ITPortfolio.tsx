@@ -45,22 +45,6 @@ const projects: Project[] = [
     tech: ["Joomla 4.0", "Live Integrasjon"],
     url: "https://www.vallobaatforening.no",
   },
-  {
-    year: 2022,
-    client: "Bod.as",
-    description:
-      "Nettsted bygget i Webnode CMS med fokus på brukervennlighet og klar struktur.",
-    tech: ["Webnode CMS"],
-    url: "https://bod.as",
-  },
-  {
-    year: 2021,
-    client: "MMP9",
-    description:
-      "Webside laget i Webnode CMS, samt redesign og modernisering av Vallø Båtforening fra Joomla 3.",
-    tech: ["Webnode CMS", "Joomla 3", "Redesign"],
-    url: "https://mmp9.no",
-  },
 ];
 
 function ProjectRow({ project, index }: { project: Project; index: number }) {
