@@ -34,7 +34,7 @@ export default function Nav() {
         <a href="#topp" className="flex items-center gap-3 group">
           <Image
             src="/images/tace-logo.png"
-            alt="TACE IT AS"
+            alt="Tace IT AS"
             width={140}
             height={28}
             className="h-7 w-auto brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity"

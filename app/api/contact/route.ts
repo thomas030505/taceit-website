@@ -22,7 +22,7 @@ export async function POST(req: Request) {
       from: "nettside@taceit.no",
       to: "erik@taceit.no",
       reply_to: email,
-      subject: `Melding fra ${name} via TACE IT`,
+      subject: `Melding fra ${name} via Tace IT`,
       text: `Navn: ${name}\nE-post: ${email}\n\n${message}`,
     }),
   });

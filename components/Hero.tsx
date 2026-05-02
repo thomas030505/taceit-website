@@ -60,7 +60,7 @@ export default function Hero() {
             className="text-[clamp(5rem,14vw,14rem)] font-light leading-none tracking-tight text-white"
             style={{ fontFamily: "var(--font-cormorant)" }}
           >
-            TACE IT
+            Tace IT
           </h1>
         </motion.div>
 

@@ -29,7 +29,7 @@ function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 export default function About() {
   return (
     <section id="om-oss" className="relative bg-[#F5F0E8] py-28 lg:py-40 px-6 overflow-hidden">
-      {/* TACE icon watermark */}
+      {/* Tace icon watermark */}
       <div
         className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-[0.08] pointer-events-none"
         style={{ backgroundImage: "url('/images/tace-icon.png')" }}
@@ -61,7 +61,7 @@ export default function About() {
             className="text-[#6B6B6B] text-lg leading-relaxed max-w-2xl mx-auto mb-6"
             style={{ fontFamily: "var(--font-inter)" }}
           >
-            TACE IT AS er et familieeid IT-selskap i Tønsberg med over 20 års
+            Tace IT AS er et familieeid IT-selskap i Tønsberg med over 20 års
             erfaring. Vi leverer webutvikling, systemrådgivning og digitale
             løsninger til bedrifter i Vestfold – og forvalter historiske
             eiendommer i Tønsbergs eldste gater.

@@ -11,7 +11,7 @@ export default function Footer() {
         <a href="#topp" className="flex items-center">
           <Image
             src="/images/tace-logo.png"
-            alt="TACE IT AS"
+            alt="Tace IT AS"
             width={120}
             height={24}
             className="h-6 w-auto brightness-0 invert opacity-40 hover:opacity-70 transition-opacity"
@@ -46,7 +46,7 @@ export default function Footer() {
             className="text-[#F5F0E8]/20 text-xs"
             style={{ fontFamily: "var(--font-inter)" }}
           >
-            © {currentYear} TACE IT AS · Tønsberg
+            © {currentYear} Tace IT AS · Tønsberg
           </p>
         </div>
       </div>

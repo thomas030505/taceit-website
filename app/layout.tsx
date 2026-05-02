@@ -21,8 +21,8 @@ const BASE_URL = "https://taceit.no";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "TACE IT AS – Webutvikling og IT-tjenester i Tønsberg",
-    template: "%s | TACE IT AS",
+    default: "Tace IT AS – Webutvikling og IT-tjenester i Tønsberg",
+    template: "%s | Tace IT AS",
   },
   description:
     "Familieeid IT-selskap i Tønsberg med over 20 års erfaring. Vi bygger nettsider og digitale løsninger for bedrifter i Vestfold – enkelt, raskt og pålitelig.",
@@ -35,23 +35,23 @@ export const metadata: Metadata = {
     "IT-rådgivning Tønsberg",
     "digitalisering SMB",
     "webdesign Tønsberg",
-    "TACE IT",
+    "Tace IT",
     "IT-selskap Tønsberg",
     "CMS utvikling",
     "Joomla",
   ],
-  authors: [{ name: "TACE IT AS", url: BASE_URL }],
-  creator: "TACE IT AS",
-  publisher: "TACE IT AS",
+  authors: [{ name: "Tace IT AS", url: BASE_URL }],
+  creator: "Tace IT AS",
+  publisher: "Tace IT AS",
   alternates: {
     canonical: BASE_URL,
   },
   openGraph: {
-    title: "TACE IT AS – Webutvikling og IT-tjenester i Tønsberg",
+    title: "Tace IT AS – Webutvikling og IT-tjenester i Tønsberg",
     description:
       "Familieeid IT-selskap i Tønsberg med over 20 års erfaring. Vi bygger nettsider og digitale løsninger for bedrifter i Vestfold – enkelt, raskt og pålitelig.",
     url: BASE_URL,
-    siteName: "TACE IT AS",
+    siteName: "Tace IT AS",
     locale: "nb_NO",
     type: "website",
     images: [
@@ -59,13 +59,13 @@ export const metadata: Metadata = {
         url: "/images/ol34/ute.jpg",
         width: 1200,
         height: 630,
-        alt: "TACE IT AS – Tønsberg",
+        alt: "Tace IT AS – Tønsberg",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TACE IT AS – Webutvikling og IT-tjenester i Tønsberg",
+    title: "Tace IT AS – Webutvikling og IT-tjenester i Tønsberg",
     description:
       "Familieeid IT-selskap i Tønsberg med over 20 års erfaring. Vi bygger nettsider og digitale løsninger for bedrifter i Vestfold.",
   },
@@ -88,7 +88,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": BASE_URL,
-  name: "TACE IT AS",
+  name: "Tace IT AS",
   description:
     "IT-konsulent og webutvikler i Tønsberg med over 20 års erfaring. Leverer webutvikling, systemrådgivning og digitale løsninger for bedrifter i Vestfold.",
   url: BASE_URL,
@@ -143,7 +143,7 @@ export default function RootLayout({
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <meta name="apple-mobile-web-app-title" content="TACE IT" />
+        <meta name="apple-mobile-web-app-title" content="Tace IT" />
         <link rel="manifest" href="/site.webmanifest" />
         <script
           type="application/ld+json"

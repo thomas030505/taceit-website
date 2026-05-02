@@ -80,7 +80,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-[#1C1C1E] font-medium text-sm" style={{ fontFamily: "var(--font-inter)" }}>
-                    TACE IT AS
+                    Tace IT AS
                   </p>
                   <p className="text-[#6B6B6B] text-sm" style={{ fontFamily: "var(--font-inter)" }}>
                     Kjellelia 1C, 3125 Tønsberg
