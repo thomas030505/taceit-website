@@ -22,18 +22,18 @@ function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 const highlights = [
   {
     icon: ShoppingBag,
-    title: "Egen nettbutikk",
-    desc: "Restauranten får sin egen bestillingsside — uten å dele kundene med plattformer.",
+    title: "Egen bestillingsside",
+    desc: "Restauranten får sin egen nettbutikk, slik at kundene kan bestille direkte — uten å gå via eksterne plattformer.",
   },
   {
     icon: Percent,
     title: "Ingen provisjon",
-    desc: "Fast pris per måned. Ingen kutting per ordre — marginene forblir hos deg.",
+    desc: "Fast månedspris og ingen gebyrer per bestilling. Du beholder marginene selv.",
   },
   {
     icon: Smartphone,
-    title: "Enkelt å bruke",
-    desc: "Bygget for at restauranteier skal slippe å lære seg et nytt system fra grunnen av.",
+    title: "Enkelt å ta i bruk",
+    desc: "Laget for restauranteiere som vil komme raskt i gang, uten å måtte lære et komplisert system.",
   },
 ];
 
@@ -69,8 +69,7 @@ export default function LettBestilt() {
               className="text-[#7B746C] text-lg leading-relaxed"
               style={{ fontFamily: "var(--font-inter)" }}
             >
-              Vårt eget bestillingssystem for restauranter. Take-away og levering
-              direkte fra egne nettsider — uten mellommann, uten provisjon per ordre.
+              Et enkelt bestillingssystem for restauranter som vil selge take-away og levering fra egen nettside — uten mellomledd og uten provisjon per ordre.
             </p>
           </FadeIn>
         </div>
