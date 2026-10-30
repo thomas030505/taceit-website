@@ -4,7 +4,7 @@ import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500"],
   style: ["normal", "italic"],
   variable: "--font-cormorant",
   display: "swap",
@@ -56,10 +56,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/ol34/ute.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Tace IT AS – Tønsberg",
+        url: "/images/maleri/britt-schlytter-henrichsen.webp",
+        width: 961,
+        height: 768,
+        alt: "Maleri av Britt Schlytter-Henrichsen: to barn ved et vindu en kveld",
       },
     ],
   },
