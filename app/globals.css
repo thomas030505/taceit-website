@@ -1,42 +1,213 @@
 @import "tailwindcss";
 
-@theme inline {
-  /* Brand palette */
-  --color-forest:      #2C3A2D;
-  --color-forest-light:#3D5240;
-  --color-sand:        #C9A87A;
-  --color-sand-light:  #E8D9BC;
-  --color-slate:       #3D5A80;
-  --color-slate-light: #5B7FA6;
+/* Hallmark · theme: Dusk, laid out the way Schlytter Consult lays it out, but warmer and richer:
+ * warm black and ivory, one gold accent (the old Tace sand), Cormorant Garamond over Inter, near-square
+ * corners and never pills. Two paintings by Britt Schlytter-Henrichsen sit behind the hero and behind
+ * the contact band; dark and ivory surfaces alternate below. */
 
-  /* Backgrounds */
-  --color-warm:        #F5F0E8;
-  --color-warm-dark:   #EDE5D5;
-  --color-ink:         #111512;
-  --color-ink-soft:    #1A2019;
-
-  /* Typography */
-  --color-text:        #1C1C1E;
-  --color-text-muted:  #6B6B6B;
-  --color-text-light:  #F5F0E8;
-
-  /* Fonts */
-  --font-display: var(--font-cormorant);
-  --font-sans:    var(--font-inter);
-  --font-mono:    ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+:root {
+  color-scheme: dark;
 }
 
-* {
+@theme inline {
+  --color-paper: oklch(14.5% 0.007 75);
+  --color-paper-2: oklch(18.5% 0.009 75);
+  --color-paper-3: oklch(23% 0.011 75);
+  --color-ink: oklch(95.5% 0.014 85);
+  --color-ink-2: oklch(85% 0.016 80);
+  --color-muted: oklch(70% 0.016 75);
+  --color-rule: oklch(30% 0.014 75);
+  --color-light: oklch(100% 0 0);
+  --color-shade: oklch(10% 0.006 75);
+
+  /* One accent: gold, the old Tace sand */
+  --color-accent: oklch(75.5% 0.072 75);
+  --color-accent-ink: oklch(17% 0.012 75);
+  --color-accent-hi: oklch(81% 0.068 78);
+  --color-accent-deep: oklch(50% 0.08 70);
+  --color-focus: oklch(78% 0.075 75);
+
+  /* Forest, for the family's initials */
+  --color-forest: oklch(32% 0.024 145);
+
+  /* Ivory surfaces */
+  --color-well: oklch(95.5% 0.012 82);
+  --color-well-2: oklch(91.5% 0.02 80);
+  --color-well-ink: oklch(20% 0.01 75);
+  --color-well-muted: oklch(46% 0.016 70);
+  --color-well-rule: oklch(85% 0.022 80);
+  --color-card: oklch(99% 0.005 85);
+
+  /* shadcn aliases, so components/ui reads the same palette */
+  --color-background: var(--color-paper);
+  --color-foreground: var(--color-ink);
+  --color-muted-foreground: var(--color-muted);
+  --color-primary: var(--color-accent);
+  --color-primary-foreground: var(--color-accent-ink);
+  --color-secondary: var(--color-paper-3);
+  --color-secondary-foreground: var(--color-ink);
+  --color-accent-foreground: var(--color-ink);
+  --color-border: var(--color-rule);
+  --color-input: oklch(100% 0 0 / 0.18);
+  --color-ring: var(--color-focus);
+  --color-ring-offset: var(--color-paper);
+
+  --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 4px;
+  --radius-btn: 2px; /* near-square, never pills */
+
+  --ease-out-dusk: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-dusk: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--color-warm);
-  color: var(--color-text);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Utility: hide scrollbar but keep scroll */
-.scrollbar-hide::-webkit-scrollbar { display: none; }
-.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+/* In the base layer, so a utility on a heading (font-sans, font-medium) still wins */
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 300;
+    letter-spacing: -0.01em;
+  }
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-accent) 40%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.on-light :focus-visible {
+  outline-color: var(--color-accent-deep);
+}
+
+/* The gold button with a lit inner edge, small tracked capitals, near-square */
+@utility btn {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: var(--radius-btn);
+  background: var(--color-accent);
+  padding-inline: 28px;
+  color: var(--color-accent-ink);
+  font: 600 0.75rem/1 var(--font-sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  box-shadow: inset 0 1px 0 color-mix(in oklab, var(--color-light) 35%, transparent);
+  transition:
+    background-color 120ms,
+    box-shadow 120ms;
+
+  &:hover {
+    background: var(--color-accent-hi);
+    box-shadow:
+      inset 0 1px 0 color-mix(in oklab, var(--color-light) 35%, transparent),
+      0 0 0 4px color-mix(in oklab, var(--color-accent) 25%, transparent);
+  }
+}
+
+/* Gold outline beside the gold button */
+@utility btn-outline {
+  background: transparent;
+  color: var(--color-accent);
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-accent) 60%, transparent);
+
+  &:hover {
+    background: color-mix(in oklab, var(--color-accent) 12%, transparent);
+    box-shadow: inset 0 0 0 1px var(--color-accent);
+  }
+}
+
+@utility glass {
+  background: oklch(18% 0.01 75 / 0.62);
+  border-radius: var(--radius-card);
+  -webkit-backdrop-filter: blur(22px) saturate(1.35);
+  backdrop-filter: blur(22px) saturate(1.35);
+  box-shadow:
+    inset 0 1px 0 oklch(100% 0 0 / 0.1),
+    inset 0 0 0 1px oklch(100% 0 0 / 0.06),
+    0 40px 80px -32px oklch(6% 0.01 75 / 0.7);
+}
+
+/* The paintings are dimmed (less saturation, less light) so they are not heavy on the eyes */
+@utility painting-soft {
+  filter: sepia(0.12) saturate(0.7) brightness(0.68);
+}
+
+/* Shadows over the paintings: the painting fades quietly into black at the foot */
+@utility scrim-hero {
+  background: linear-gradient(
+    to bottom,
+    color-mix(in oklab, var(--color-shade) 45%, transparent) 0%,
+    transparent 20%,
+    color-mix(in oklab, var(--color-paper) 20%, transparent) 38%,
+    color-mix(in oklab, var(--color-paper) 60%, transparent) 60%,
+    color-mix(in oklab, var(--color-paper) 90%, transparent) 80%,
+    var(--color-paper) 96%
+  );
+}
+
+@utility scrim-contact {
+  background: linear-gradient(
+    to bottom,
+    var(--color-paper) 0%,
+    color-mix(in oklab, var(--color-paper) 35%, transparent) 20%,
+    color-mix(in oklab, var(--color-paper) 15%, transparent) 70%,
+    color-mix(in oklab, var(--color-paper) 30%, transparent) 88%,
+    var(--color-paper) 100%
+  );
+}
+
+/* The painting breathes, very slowly */
+@keyframes drift {
+  to {
+    transform: scale(1.045) translate(-0.6%, 0.4%);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@utility animate-drift {
+  animation: drift 48s var(--ease-in-out-dusk) infinite alternate;
+}
+
+@utility animate-rise {
+  animation: rise 560ms var(--ease-out-dusk) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
