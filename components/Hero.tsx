@@ -53,6 +53,24 @@ export default function Hero() {
           </a>
         </div>
       </Container>
+
+      {/* Who built the site: a quiet mark in the corner that lights up on hover */}
+      <a
+        href="https://schlytterconsult.no"
+        target="_blank"
+        rel="noopener"
+        aria-label="Utviklet av Schlytter Consult"
+        title="Utviklet av Schlytter Consult"
+        className="absolute bottom-5 right-4 opacity-30 transition-[opacity,filter] duration-300 hover:opacity-100 hover:drop-shadow-[0_0_14px_oklch(100%_0_0/0.6)] focus-visible:opacity-100 sm:right-6 lg:right-16"
+      >
+        <Image
+          src="/images/schlytter-consult/icon-white.webp"
+          alt=""
+          width={227}
+          height={256}
+          className="h-7 w-auto"
+        />
+      </a>
     </section>
   );
 }

@@ -109,9 +109,26 @@ export default function Footer01() {
           </nav>
         </div>
 
-        <div className="mt-16 flex flex-col gap-3 border-t border-rule py-8 text-sm text-muted sm:flex-row sm:justify-between sm:gap-8">
+        <div className="mt-16 flex flex-col gap-4 border-t border-rule py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between sm:gap-8">
           <p>© {new Date().getFullYear()} Tace IT AS</p>
-          <p className="sm:text-right">Malerier: Britt Schlytter-Henrichsen</p>
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-10">
+            <p>Malerier: Britt Schlytter-Henrichsen</p>
+            <a
+              href="https://schlytterconsult.no"
+              target="_blank"
+              rel="noopener"
+              className="group inline-flex items-center gap-3 transition-colors duration-150 hover:text-ink"
+            >
+              Utviklet av
+              <Image
+                src="/images/schlytter-consult/logo-white.webp"
+                alt="Schlytter Consult"
+                width={600}
+                height={247}
+                className="h-7 w-auto opacity-75 transition-opacity duration-150 group-hover:opacity-100"
+              />
+            </a>
+          </div>
         </div>
       </Container>
 
